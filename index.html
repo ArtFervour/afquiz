@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="icon" href="./img/aff.png">
+
+    <title>Art Fervour Quiz</title>
+  </head>
+  <body>
+    <style type="text/css">
+        .card:hover {
+            cursor: pointer;
+            border-color: black;
+        }
+        .card-img-top {
+            padding: 4px;
+        }
+        .selectedcard {
+            border-color: black;
+        }
+    </style>
+    <div class="container" align="center">
+        <img src="./img/af.png" alt="Art Fervour Logo" style="width: 48px;">
+    </div>
+    <div class="container" id="q1container" style="padding-top: 3.2rem;">
+        <h4 style="padding-bottom: 1.6rem;">Pick a piece that draws you</h4>
+      <div class="row">
+        <div class="col-sm" align="center">
+          <div class="card q1" id="q1a" style="width: 18rem;">
+            <img class="card-img-top" src="./img/q1a.png">
+          </div>
+          <br>
+        </div>
+        <div class="col-sm" align="center">
+          <div class="card q1" id="q1b" style="width: 18rem;">
+            <img class="card-img-top" src="./img/q1b.png">
+          </div>
+          <br>
+        </div>
+        <div class="col-sm" align="center">
+          <div class="card q1" id="q1c" style="width: 18rem;">
+            <img class="card-img-top" src="./img/q1c.png">
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="q2container" style="padding-top: 3.2rem;">
+        <h4 style="padding-bottom: 1.6rem;">Pick a piece that draws you</h4>
+      <div class="row">
+        <div class="col-sm" align="center">
+          <div class="card q2" id="q2a" style="width: 18rem;">
+            <img class="card-img-top" src="./img/q2a.png">
+          </div>
+          <br>
+        </div>
+        <div class="col-sm" align="center">
+          <div class="card q2" id="q2b" style="width: 18rem;">
+            <img class="card-img-top" src="./img/q2b.png">
+          </div>
+          <br>
+        </div>
+        <div class="col-sm" align="center">
+          <div class="card q2" id="q2c" style="width: 18rem;">
+            <img class="card-img-top" src="./img/q2c.png">
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="endingcontainer" style="padding-top: 3.2rem;" align="center">
+        <h4 id="endingh"></h4>
+        <p>Here's a guide for you:</p>
+        <br>
+        <button type="button" id="restart" class="btn btn-light">Restart Quiz</button>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script>
+        $( document ).ready(function() {
+            $('#q2container').hide();
+            $('#endingcontainer').hide();
+            var q1, q2;
+            var tending = 'You\'re a Traditionalist!';
+            var cending = 'You\'re a Progressivist!';
+            var mending = 'You\'re a Mixed Bag!';
+            $('#q1a').click(function() {
+                q1 = 'T';
+            });
+            $('#q1b').click(function() {
+                q1 = 'C';
+            });
+            $('#q1c').click(function() {
+                q1 = 'C';
+            });
+            $('.q1').click(function() {
+                $('#q1container').hide(1000);
+                $('#q2container').show(1000);
+            });
+            $('#q2a').click(function() {
+                q2 = 'C';
+            });
+            $('#q2b').click(function() {
+                q2 = 'T';
+            });
+            $('#q2c').click(function() {
+                q2 = 'T';
+            });
+            $('.q2').click(function() {
+                $('#q2container').hide(1000);
+                $('#endingcontainer').show(1000);
+                if (q1 === 'T' && q2 === 'T') {
+                    $('#endingh').text(tending);
+                } else if (q1 === 'C' && q2 === 'C') {
+                    $('#endingh').text(cending);
+                } else {
+                    $('#endingh').text(mending);
+                }
+            });
+            $('#restart').click(function() {
+                $('#endingcontainer').hide();
+                $('#q1container').show();
+            })
+        });
+    </script>
+  </body>
+</html>
