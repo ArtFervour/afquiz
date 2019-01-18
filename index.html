@@ -113,10 +113,10 @@
             <div class="col-3">
                 <div class="card" id="emailcard" style="width: 18rem;">
                     <div class="card-body">
-                        <form name="contact" id="emailform" method="POST" data-netlify="true">
+                        <form name="quiz" id="emailform" method="POST" data-netlify="true">
                           <div class="form-group">
                             <label for="inputemail">Email address</label>
-                            <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp" placeholder="Enter email" name="email">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                           </div>
                           <button type="submit" class="btn btn-light" id="submitemail" disabled>Submit</button>
@@ -161,7 +161,7 @@
                 q[0] = 'C';
             });
             $('.q1').click(function() {
-                $('#q1container').hide(1000);
+                $('#q1container').hide(700);
                 $('#q2container').show(1000);
             });
             $('#q2a').click(function() {
@@ -174,7 +174,7 @@
                 q[1] = 'T';
             });
             $('.q2').click(function() {
-                $('#q2container').hide(1000);
+                $('#q2container').hide(700);
                 $('#q3container').show(1000);
             });
             $('#q3a').click(function() {
@@ -187,7 +187,7 @@
                 q[2] = 'C';
             });
             $('.q3').click(function() {
-                $('#q3container').hide(1000);
+                $('#q3container').hide(700);
                 $('#emailcontainer').show(1000);
             });
             $('#submitemail').prop('disabled', true);
@@ -202,7 +202,7 @@
                 e.preventDefault();
                 var $form = $(this);
                 $.post($form.attr("action"), $form.serialize()).then(function() {
-                    $('#emailcontainer').hide(1000);
+                    $('#emailcontainer').hide(700);
                     $('#endingcontainer').show(1000);
                     if (q[0] === 'T' && q[1] === 'T') {
                         $('#endingh').text(tending);
