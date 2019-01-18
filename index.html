@@ -34,6 +34,62 @@
     <div class="container" align="center">
         <img src="./img/af.png" alt="Art Fervour Logo" style="width: 48px;">
     </div>
+
+    <div class="container" id="citycontainer" style="padding-top: 3.2rem;">
+        <h4 style="padding-bottom: 1.6rem;">Where do you want to see art?</h4>
+      <div class="row">
+        <div class="col-sm" align="center">
+          <div class="card city" id="bangalore" style="width: 18rem;">
+            <img class="card-img-top" src="./img/bangalore/logo.jpg">
+            <h5>Bangalore</h5>
+          </div>
+          <br>
+        </div>
+        <div class="col-sm" align="center">
+          <div class="card city" id="delhi" style="width: 18rem;">
+            <img class="card-img-top" src="./img/delhi/logo.jpg">
+            <h5>Delhi</h5>
+          </div>
+          <br>
+        </div>
+        <div class="col-sm" align="center">
+          <div class="card city" id="goa" style="width: 18rem;">
+            <img class="card-img-top" src="./img/goa/logo.jpg">
+            <h5>Goa</h5>
+          </div>
+          <br>
+        </div>
+        <div class="col-sm" align="center">
+          <div class="card city" id="jaipur" style="width: 18rem;">
+            <img class="card-img-top" src="./img/jaipur/logo.jpg">
+            <h5>Jaipur</h5>
+          </div>
+          <br>
+        </div>
+        <div class="col-sm" align="center">
+          <div class="card city" id="kochi" style="width: 18rem;">
+            <img class="card-img-top" src="./img/kochi/logo.jpg">
+            <h5>Kochi</h5>
+          </div>
+          <br>
+        </div>
+        <div class="col-sm" align="center">
+          <div class="card city" id="kolkata" style="width: 18rem;">
+            <img class="card-img-top" src="./img/kolkata/logo.jpg">
+            <h5>Kolkata</h5>
+          </div>
+          <br>
+        </div>
+        <div class="col-sm" align="center">
+          <div class="card city" id="mumbai" style="width: 18rem;">
+            <img class="card-img-top" src="./img/mumbai/logo.jpg">
+            <h5>Mumbai</h5>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+
     <div class="container" id="q1container" style="padding-top: 3.2rem;">
         <h4 style="padding-bottom: 1.6rem;">Pick a piece that draws you</h4>
       <div class="row">
@@ -142,6 +198,7 @@
 
     <script>
         $( document ).ready(function() {
+            $('#q1container').hide();
             $('#q2container').hide();
             $('#q3container').hide();
             $('#emailcontainer').hide();
@@ -151,6 +208,10 @@
             var tending = 'You\'re a Traditionalist!';
             var cending = 'You\'re a Progressivist!';
             var mending = 'You\'re a Mixed Bag!';
+            $('.city').click(function() {
+                $('#citycontainer').hide(700);
+                $('#q1container').show(1000);
+            });
             $('#q1a').click(function() {
                 q[0] = 'T';
             });
