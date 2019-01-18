@@ -23,6 +23,13 @@
         .selectedcard {
             border-color: black;
         }
+        .guideimg {
+            width: 21rem;
+        }
+        #emailcard, #emailcard:hover {
+            border: none !important;
+            cursor: default;
+        }
     </style>
     <div class="container" align="center">
         <img src="./img/af.png" alt="Art Fervour Logo" style="width: 48px;">
@@ -75,61 +82,139 @@
       </div>
     </div>
 
+    <div class="container" id="q3container" style="padding-top: 3.2rem;">
+        <h4 style="padding-bottom: 1.6rem;">Pick a piece that draws you</h4>
+      <div class="row">
+        <div class="col-sm" align="center">
+          <div class="card q3" id="q3a" style="width: 18rem;">
+            <img class="card-img-top" src="./img/q3a.png">
+          </div>
+          <br>
+        </div>
+        <div class="col-sm" align="center">
+          <div class="card q3" id="q3b" style="width: 18rem;">
+            <img class="card-img-top" src="./img/q3b.png">
+          </div>
+          <br>
+        </div>
+        <div class="col-sm" align="center">
+          <div class="card q3" id="q3c" style="width: 18rem;">
+            <img class="card-img-top" src="./img/q3c.jpg">
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="emailcontainer" style="padding-top: 3.2rem;" align="center">
+        <h4>You're just a step away from your personalized art guide!</h4>
+        <br><br>
+        <div class="row justify-content-center">
+            <div class="col-3">
+                <div class="card" id="emailcard" style="width: 18rem;">
+                    <div class="card-body">
+                        <form name="contact" id="emailform" method="POST" data-netlify="true">
+                          <div class="form-group">
+                            <label for="inputemail">Email address</label>
+                            <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                          </div>
+                          <button type="submit" class="btn btn-light" id="submitemail" disabled>Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+
     <div class="container" id="endingcontainer" style="padding-top: 3.2rem;" align="center">
         <h4 id="endingh"></h4>
         <p>Here's a guide for you:</p>
         <br>
+        <img src="./img/kolkata/mixed.jpg" alt="Your personalized art guide" class="guideimg">
+        <br><br>
         <button type="button" id="restart" class="btn btn-light">Restart Quiz</button>
+        <br>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     <script>
         $( document ).ready(function() {
             $('#q2container').hide();
+            $('#q3container').hide();
+            $('#emailcontainer').hide();
             $('#endingcontainer').hide();
-            var q1, q2;
+            var q = ['', '', ''];
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             var tending = 'You\'re a Traditionalist!';
             var cending = 'You\'re a Progressivist!';
             var mending = 'You\'re a Mixed Bag!';
             $('#q1a').click(function() {
-                q1 = 'T';
+                q[0] = 'T';
             });
             $('#q1b').click(function() {
-                q1 = 'C';
+                q[0] = 'C';
             });
             $('#q1c').click(function() {
-                q1 = 'C';
+                q[0] = 'C';
             });
             $('.q1').click(function() {
                 $('#q1container').hide(1000);
                 $('#q2container').show(1000);
             });
             $('#q2a').click(function() {
-                q2 = 'C';
+                q[1] = 'C';
             });
             $('#q2b').click(function() {
-                q2 = 'T';
+                q[1] = 'T';
             });
             $('#q2c').click(function() {
-                q2 = 'T';
+                q[1] = 'T';
             });
             $('.q2').click(function() {
                 $('#q2container').hide(1000);
-                $('#endingcontainer').show(1000);
-                if (q1 === 'T' && q2 === 'T') {
-                    $('#endingh').text(tending);
-                } else if (q1 === 'C' && q2 === 'C') {
-                    $('#endingh').text(cending);
-                } else {
-                    $('#endingh').text(mending);
+                $('#q3container').show(1000);
+            });
+            $('#q3a').click(function() {
+                q[2] = 'T';
+            });
+            $('#q3b').click(function() {
+                q[2] = 'C';
+            });
+            $('#q3c').click(function() {
+                q[2] = 'C';
+            });
+            $('.q3').click(function() {
+                $('#q3container').hide(1000);
+                $('#emailcontainer').show(1000);
+            });
+            $('#submitemail').prop('disabled', true);
+            $('#inputemail').keyup(function() {
+                var email = String($(this).val());
+                console.log(email);
+                if (re.test(email.toLowerCase())) {
+                    $('#submitemail').prop('disabled', false);
                 }
             });
+            $('#emailform').submit(function(e) {
+                e.preventDefault();
+                var $form = $(this);
+                $.post($form.attr("action"), $form.serialize()).then(function() {
+                    $('#emailcontainer').hide(1000);
+                    $('#endingcontainer').show(1000);
+                    if (q[0] === 'T' && q[1] === 'T') {
+                        $('#endingh').text(tending);
+                    } else if (q[0] === 'C' && q[1] === 'C') {
+                        $('#endingh').text(cending);
+                    } else {
+                        $('#endingh').text(mending);
+                    }
+                });
+            });
             $('#restart').click(function() {
+                q = ['', '', ''];
                 $('#endingcontainer').hide();
                 $('#q1container').show();
             })
