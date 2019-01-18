@@ -188,7 +188,7 @@
         <h4 id="endingh"></h4>
         <p>Here's a guide for you:</p>
         <br>
-        <img src="./img/kolkata/mixed.jpg" alt="Your personalized art guide" class="guideimg">
+        <img src="" alt="Your personalized art guide" class="guideimg" id="guideimg">
         <br><br>
         <button type="button" id="restart" class="btn btn-light">Restart Quiz</button>
         <br>
@@ -208,6 +208,29 @@
             var tending = 'You\'re a Traditionalist!';
             var cending = 'You\'re a Progressivist!';
             var mending = 'You\'re a Mixed Bag!';
+            var city = '';
+            var type = '';
+            $('#bangalore').click(function() {
+                city = 'bangalore';
+            });
+            $('#delhi').click(function() {
+                city = 'delhi';
+            });
+            $('#goa').click(function() {
+                city = 'goa';
+            });
+            $('#jaipur').click(function() {
+                city = 'jaipur';
+            });
+            $('#kochi').click(function() {
+                city = 'kochi';
+            });
+            $('#kolkata').click(function() {
+                city = 'kolkata';
+            });
+            $('#mumbai').click(function() {
+                city = 'mumbai';
+            });
             $('.city').click(function() {
                 $('#citycontainer').hide(700);
                 $('#q1container').show(1000);
@@ -267,17 +290,23 @@
                     $('#endingcontainer').show(1000);
                     if (q[0] === 'T' && q[1] === 'T') {
                         $('#endingh').text(tending);
+                        type = 'traditional';
+                        $('#guideimg').prop('src', './img/' + city + '/' + type + '.jpg');
                     } else if (q[0] === 'C' && q[1] === 'C') {
                         $('#endingh').text(cending);
+                        type = 'contemporary';
+                        $('#guideimg').prop('src', './img/' + city + '/' + type + '.jpg');
                     } else {
                         $('#endingh').text(mending);
+                        type = 'mixed';
+                        $('#guideimg').prop('src', './img/' + city + '/' + type + '.jpg');
                     }
                 });
             });
             $('#restart').click(function() {
                 q = ['', '', ''];
                 $('#endingcontainer').hide();
-                $('#q1container').show();
+                $('#citycontainer').show();
             })
         });
     </script>
