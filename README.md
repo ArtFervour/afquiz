@@ -109,19 +109,19 @@ To configure the quiz, open the `js/constants.js` file. On this file, you can ch
     "outcomes": [
         {
             "heading": "You're a Traditionalist!",
-            "paragraph": "You like things traditional. Here\'s a guide for you:",
+            "paragraph": "You like things traditional. Here's a guide for you:",
             "img": "traditional.jpg",
             "rr": [["q1a"], ["q2b", "q2c"], ["q3a", "q3b", "q3c"]]
         },
         {
             "heading": "You're a Progressivist!",
-            "paragraph": "You like new-age shit. Here\'s a guide for you:",
+            "paragraph": "You like new-age shit. Here's a guide for you:",
             "img": "contemporary.jpg",
             "rr": [["q1b", "q1c"], ["q2a"], ["q3a", "q3b", "q3c"]]
         },
         {
             "heading": "You're a Mixed Bag!",
-            "paragraph": "You like it all! Here\'s a guide for you:",
+            "paragraph": "You like it all! Here's a guide for you:",
             "img": "mixed.jpg",
             "rr": [["q1b", "q1c"], ["q2b", "q2c"], ["q3a", "q3b", "q3c"]]
         },
