@@ -13,6 +13,9 @@
   </head>
   <body>
     <style type="text/css">
+        .card {
+            width: 18rem;
+        }
         .card:hover {
             cursor: pointer;
             border-color: black;
@@ -24,158 +27,171 @@
             border-color: black;
         }
         .guideimg {
-            width: 21rem;
+            width: 100%;
+            max-width: 720px;
         }
         #emailcard, #emailcard:hover {
             border: none !important;
             cursor: default;
         }
+        #aflogo {
+            width: 48px;
+        }
+        #headercontainer {
+            padding-top: 3.2rem;
+        }
+        .maincontainer {
+            padding-top: 3.2rem;
+            padding-bottom: 3.2rem;
+        }
+        .maintext {
+            padding-bottom: 1.6rem;
+        }
     </style>
-    <div class="container" align="center">
-        <img src="./img/af.png" alt="Art Fervour Logo" style="width: 48px;">
+    <div class="container" id="headercontainer" align="center">
+        <img src="./img/af.png" alt="Art Fervour Logo" id="aflogo">
     </div>
 
-    <div class="container" id="citycontainer" style="padding-top: 3.2rem;">
-        <h4 style="padding-bottom: 1.6rem;">Where do you want to see art?</h4>
-      <div class="row">
-        <div class="col-sm" align="center">
-          <div class="card city" id="bangalore" style="width: 18rem;">
-            <img class="card-img-top" src="./img/bangalore/logo.png">
-            <h5>Bangalore</h5>
-          </div>
-          <br>
-        </div>
-        <div class="col-sm" align="center">
-          <div class="card city" id="delhi" style="width: 18rem;">
-            <img class="card-img-top" src="./img/delhi/logo.png">
-            <h5>Delhi</h5>
-          </div>
-          <br>
-        </div>
-        <div class="col-sm" align="center">
-          <div class="card city" id="goa" style="width: 18rem;">
-            <img class="card-img-top" src="./img/goa/logo.png">
-            <h5>Goa</h5>
-          </div>
-          <br>
-        </div>
-        <div class="col-sm" align="center">
-          <div class="card city" id="jaipur" style="width: 18rem;">
-            <img class="card-img-top" src="./img/jaipur/logo.png">
-            <h5>Jaipur</h5>
-          </div>
-          <br>
-        </div>
-        <div class="col-sm" align="center">
-          <div class="card city" id="kochi" style="width: 18rem;">
-            <img class="card-img-top" src="./img/kochi/logo.png">
-            <h5>Kochi</h5>
-          </div>
-          <br>
-        </div>
-        <div class="col-sm" align="center">
-          <div class="card city" id="kolkata" style="width: 18rem;">
-            <img class="card-img-top" src="./img/kolkata/logo.png">
-            <h5>Kolkata</h5>
-          </div>
-          <br>
-        </div>
-        <div class="col-sm" align="center">
-          <div class="card city" id="mumbai" style="width: 18rem;">
-            <img class="card-img-top" src="./img/mumbai/logo.png">
-            <h5>Mumbai</h5>
-          </div>
-          <br>
-        </div>
-      </div>
-    </div>
-
-    <div class="container" id="q1container" style="padding-top: 3.2rem;">
-        <h4 style="padding-bottom: 1.6rem;">Pick a piece that draws you</h4>
-      <div class="row">
-        <div class="col-sm" align="center">
-          <div class="card q1" id="q1a" style="width: 18rem;">
-            <img class="card-img-top" src="./img/q1a.png">
-          </div>
-          <br>
-        </div>
-        <div class="col-sm" align="center">
-          <div class="card q1" id="q1b" style="width: 18rem;">
-            <img class="card-img-top" src="./img/q1b.png">
-          </div>
-          <br>
-        </div>
-        <div class="col-sm" align="center">
-          <div class="card q1" id="q1c" style="width: 18rem;">
-            <img class="card-img-top" src="./img/q1c.png">
-          </div>
-          <br>
-        </div>
-      </div>
-    </div>
-
-    <div class="container" id="q2container" style="padding-top: 3.2rem;">
-        <h4 style="padding-bottom: 1.6rem;">Pick a piece that draws you</h4>
-      <div class="row">
-        <div class="col-sm" align="center">
-          <div class="card q2" id="q2a" style="width: 18rem;">
-            <img class="card-img-top" src="./img/q2a.png">
-          </div>
-          <br>
-        </div>
-        <div class="col-sm" align="center">
-          <div class="card q2" id="q2b" style="width: 18rem;">
-            <img class="card-img-top" src="./img/q2b.png">
-          </div>
-          <br>
-        </div>
-        <div class="col-sm" align="center">
-          <div class="card q2" id="q2c" style="width: 18rem;">
-            <img class="card-img-top" src="./img/q2c.png">
-          </div>
-          <br>
-        </div>
-      </div>
-    </div>
-
-    <div class="container" id="q3container" style="padding-top: 3.2rem;">
-        <h4 style="padding-bottom: 1.6rem;">Pick a piece that draws you</h4>
-      <div class="row">
-        <div class="col-sm" align="center">
-          <div class="card q3" id="q3a" style="width: 18rem;">
-            <img class="card-img-top" src="./img/q3a.png">
-          </div>
-          <br>
-        </div>
-        <div class="col-sm" align="center">
-          <div class="card q3" id="q3b" style="width: 18rem;">
-            <img class="card-img-top" src="./img/q3b.png">
-          </div>
-          <br>
-        </div>
-        <div class="col-sm" align="center">
-          <div class="card q3" id="q3c" style="width: 18rem;">
-            <img class="card-img-top" src="./img/q3c.jpg">
-          </div>
-          <br>
-        </div>
-      </div>
-    </div>
-
-    <div class="container" id="emailcontainer" style="padding-top: 3.2rem;" align="center">
-        <h4>You're just a step away from your personalized art guide!</h4>
-        <br><br>
+    <div class="container maincontainer" id="citycontainer">
+        <h4 class="maintext">Where do you want to see art?</h4>
         <div class="row">
             <div class="col-sm" align="center">
-                <div class="card" id="emailcard" style="width: 18rem;">
+                <div class="card city" id="bangalore">
+                    <img class="card-img-top" src="./img/bangalore/logo.png">
+                    <h5>Bangalore</h5>
+                </div>
+                <br>
+            </div>
+            <div class="col-sm" align="center">
+                <div class="card city" id="delhi">
+                    <img class="card-img-top" src="./img/delhi/logo.png">
+                    <h5>Delhi</h5>
+                </div>
+                <br>
+            </div>
+            <div class="col-sm" align="center">
+                <div class="card city" id="goa">
+                    <img class="card-img-top" src="./img/goa/logo.png">
+                    <h5>Goa</h5>
+                </div>
+                <br>
+            </div>
+            <div class="col-sm" align="center">
+                <div class="card city" id="jaipur">
+                    <img class="card-img-top" src="./img/jaipur/logo.png">
+                    <h5>Jaipur</h5>
+                </div>
+              <br>
+            </div>
+            <div class="col-sm" align="center">
+                <div class="card city" id="kochi">
+                    <img class="card-img-top" src="./img/kochi/logo.png">
+                    <h5>Kochi</h5>
+                </div>
+                <br>
+            </div>
+            <div class="col-sm" align="center">
+                <div class="card city" id="kolkata">
+                    <img class="card-img-top" src="./img/kolkata/logo.png">
+                    <h5>Kolkata</h5>
+                </div>
+                <br>
+            </div>
+            <div class="col-sm" align="center">
+                <div class="card city" id="mumbai">
+                    <img class="card-img-top" src="./img/mumbai/logo.png">
+                    <h5>Mumbai</h5>
+                </div>
+                <br>
+            </div>
+      </div>
+    </div>
+
+    <div class="container maincontainer" id="q1container">
+        <h4 class="maintext">Pick a piece that draws you</h4>
+        <div class="row">
+            <div class="col-sm" align="center">
+                <div class="card q1" id="q1a">
+                    <img class="card-img-top" src="./img/q1a.png">
+                </div>
+                <br>
+            </div>
+            <div class="col-sm" align="center">
+                <div class="card q1" id="q1b">
+                    <img class="card-img-top" src="./img/q1b.png">
+                </div>
+                <br>
+            </div>
+            <div class="col-sm" align="center">
+                <div class="card q1" id="q1c">
+                    <img class="card-img-top" src="./img/q1c.png">
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="container maincontainer" id="q2container">
+        <h4 class="maintext">Pick a piece that draws you</h4>
+        <div class="row">
+            <div class="col-sm" align="center">
+                <div class="card q2" id="q2a">
+                    <img class="card-img-top" src="./img/q2a.png">
+                </div>
+                <br>
+            </div>
+            <div class="col-sm" align="center">
+                <div class="card q2" id="q2b">
+                    <img class="card-img-top" src="./img/q2b.png">
+                </div>
+                <br>
+            </div>
+            <div class="col-sm" align="center">
+                <div class="card q2" id="q2c">
+                    <img class="card-img-top" src="./img/q2c.png">
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="container maincontainer" id="q3container">
+        <h4 class="maintext">Pick a piece that draws you</h4>
+        <div class="row">
+            <div class="col-sm" align="center">
+                <div class="card q3" id="q3a">
+                    <img class="card-img-top" src="./img/q3a.png">
+                </div>
+                <br>
+            </div>
+            <div class="col-sm" align="center">
+                <div class="card q3" id="q3b">
+                    <img class="card-img-top" src="./img/q3b.png">
+                </div>
+                <br>
+            </div>
+            <div class="col-sm" align="center">
+                <div class="card q3" id="q3c">
+                    <img class="card-img-top" src="./img/q3c.jpg">
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="container maincontainer" id="emailcontainer" align="center">
+        <h4 class="maintext">You're just a step away from your personalized art guide!</h4>
+        <div class="row">
+            <div class="col-sm" align="center">
+                <div class="card" id="emailcard">
                     <div class="card-body">
                         <form name="quiz" id="emailform" method="POST" data-netlify="true">
-                          <div class="form-group">
-                            <label for="inputemail">Email address</label>
-                            <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp" placeholder="Enter email" name="email">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                          </div>
-                          <button type="submit" class="btn btn-light" id="submitemail" disabled>Submit</button>
+                            <div class="form-group">
+                                <label for="inputemail">Email address</label>
+                                <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <button type="submit" class="btn btn-light" id="submitemail" disabled>Submit</button>
                         </form>
                     </div>
                 </div>
@@ -184,14 +200,13 @@
         </div>
     </div>
 
-    <div class="container" id="endingcontainer" style="padding-top: 3.2rem;" align="center">
+    <div class="container maincontainer" id="endingcontainer" align="center">
         <h4 id="endingh"></h4>
-        <p>Here's a guide for you:</p>
         <br>
+        <p class="maintext" align="left" id="endingp"></p>
         <img src="" alt="Your personalized art guide" class="guideimg" id="guideimg">
         <br><br>
         <button type="button" id="restart" class="btn btn-light">Restart Quiz</button>
-        <br>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -208,8 +223,12 @@
             var tending = 'You\'re a Traditionalist!';
             var cending = 'You\'re a Progressivist!';
             var mending = 'You\'re a Mixed Bag!';
+            var tendingp = 'You like things traditional. Here\'s a guide for you:';
+            var cendingp = 'You like new-age shit. Here\'s a guide for you:';
+            var mendingp = 'You like it all! Here\'s a guide for you:';
             var city = '';
             var type = '';
+            var emailcollected = window.location.search.includes('collected');
             $('#bangalore').click(function() {
                 city = 'bangalore';
             });
@@ -232,8 +251,8 @@
                 city = 'mumbai';
             });
             $('.city').click(function() {
-                $('#citycontainer').hide(700);
-                $('#q1container').show(1000);
+                $('#citycontainer').hide(400);
+                $('#q1container').show(800);
             });
             $('#q1a').click(function() {
                 q[0] = 'T';
@@ -245,8 +264,8 @@
                 q[0] = 'C';
             });
             $('.q1').click(function() {
-                $('#q1container').hide(700);
-                $('#q2container').show(1000);
+                $('#q1container').hide(400);
+                $('#q2container').show(800);
             });
             $('#q2a').click(function() {
                 q[1] = 'C';
@@ -258,8 +277,8 @@
                 q[1] = 'T';
             });
             $('.q2').click(function() {
-                $('#q2container').hide(700);
-                $('#q3container').show(1000);
+                $('#q2container').hide(400);
+                $('#q3container').show(800);
             });
             $('#q3a').click(function() {
                 q[2] = 'T';
@@ -271,8 +290,28 @@
                 q[2] = 'C';
             });
             $('.q3').click(function() {
-                $('#q3container').hide(700);
-                $('#emailcontainer').show(1000);
+                $('#q3container').hide(400);
+                if (emailcollected) {
+                    $('#endingcontainer').show(800);
+                } else {
+                    $('#emailcontainer').show(800);
+                }
+                if (q[0] === 'T' && q[1] === 'T') {
+                    $('#endingh').text(tending);
+                    $('#endingp').text(tendingp);
+                    type = 'traditional';
+                    $('#guideimg').prop('src', './img/' + city + '/' + type + '.jpg');
+                } else if (q[0] === 'C' && q[1] === 'C') {
+                    $('#endingh').text(cending);
+                    $('#endingp').text(cendingp);
+                    type = 'contemporary';
+                    $('#guideimg').prop('src', './img/' + city + '/' + type + '.jpg');
+                } else {
+                    $('#endingh').text(mending);
+                    $('#endingp').text(mendingp);
+                    type = 'mixed';
+                    $('#guideimg').prop('src', './img/' + city + '/' + type + '.jpg');
+                }
             });
             $('#submitemail').prop('disabled', true);
             $('#inputemail').keyup(function() {
@@ -285,21 +324,9 @@
                 e.preventDefault();
                 var $form = $(this);
                 $.post($form.attr("action"), $form.serialize()).then(function() {
-                    $('#emailcontainer').hide(700);
-                    $('#endingcontainer').show(1000);
-                    if (q[0] === 'T' && q[1] === 'T') {
-                        $('#endingh').text(tending);
-                        type = 'traditional';
-                        $('#guideimg').prop('src', './img/' + city + '/' + type + '.jpg');
-                    } else if (q[0] === 'C' && q[1] === 'C') {
-                        $('#endingh').text(cending);
-                        type = 'contemporary';
-                        $('#guideimg').prop('src', './img/' + city + '/' + type + '.jpg');
-                    } else {
-                        $('#endingh').text(mending);
-                        type = 'mixed';
-                        $('#guideimg').prop('src', './img/' + city + '/' + type + '.jpg');
-                    }
+                    emailcollected = true;
+                    $('#emailcontainer').hide(40);
+                    $('#endingcontainer').show(800);
                 });
             });
             $('#restart').click(function() {
