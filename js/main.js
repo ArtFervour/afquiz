@@ -63,16 +63,19 @@ $( document ).ready(function() {
         city = $(this).attr('id');
         $('#citycontainer').hide(400);
         $('#q1container').show(800);
+        $('#headernav').append(`<img src="${$(this).find(`img`).attr('src')}" id="aflogonav">`);
     });
     $('.q1').click(function() {
         q[0] = $(this).attr('id');
         $('#q1container').hide(400);
         $('#q2container').show(800);
+        $('#headernav').append(`<img src="${$(this).find(`img`).attr('src')}" id="aflogonav">`);
     });
     $('.q2').click(function() {
         q[1] = $(this).attr('id');
         $('#q2container').hide(400);
         $('#q3container').show(800);
+        $('#headernav').append(`<img src="${$(this).find(`img`).attr('src')}" id="aflogonav">`);
     });
     $('.q3').click(function() {
         q[2] = $(this).attr('id');
@@ -82,6 +85,7 @@ $( document ).ready(function() {
         } else {
             $('#emailcontainer').show(800);
         }
+        $('#headernav').append(`<img src="${$(this).find(`img`).attr('src')}" id="aflogonav">`);
         var o1 = d.outcomes[0];
         var o2 = d.outcomes[1];
         var o3 = d.outcomes[2];
@@ -122,5 +126,6 @@ $( document ).ready(function() {
         q = ['', '', ''];
         $('#endingcontainer').hide();
         $('#citycontainer').show();
+        $('#headernav').empty();
     })
 });
