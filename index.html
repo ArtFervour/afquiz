@@ -13,6 +13,14 @@
     <title id="sitetitle"></title>
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <div class="container" id="headercontainer">
         <div class="row">
             <div class="col-sm" align="left">
@@ -64,6 +72,8 @@
     </div>
 
     <div class="container maincontainer" id="endingcontainer" align="center">
+        <div class="fb-share-button" data-href="https://artfervour.com" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fartfervour.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+        <br><br>
         <h4 id="endingh"></h4>
         <br>
         <p class="maintext" align="left" id="endingp"></p>
