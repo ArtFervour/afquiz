@@ -6,6 +6,8 @@ $('#endingcontainer').hide();
 
 $('#sitetitle').text(d.site.title);
 
+$('#headernav').append(`<img src="./img/af-logo.png" id="aflogonav">`);
+
 $('#cityh').text(d.cities.heading);
 $('#cityrow').html(d.cities.citylist.reduce(function (acc, c) {
     return acc + 
@@ -127,5 +129,6 @@ $( document ).ready(function() {
         $('#endingcontainer').hide();
         $('#citycontainer').show();
         $('#headernav').empty();
+        $('#headernav').append(`<img src="./img/af-logo.png" id="aflogonav">`);
     })
 });
