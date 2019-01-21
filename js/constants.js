@@ -104,7 +104,7 @@ var d = {
             "rr": [["q1a"], ["q2b", "q2c"], ["q3a", "q3b", "q3c"]]
         },
         {
-            "heading": "You're a Progressivist!",
+            "heading": "You're New Age!",
             "paragraph": "You like new-age shit. Here's a guide for you:",
             "img": "contemporary.jpg",
             "rr": [["q1b", "q1c"], ["q2a"], ["q3a", "q3b", "q3c"]]
