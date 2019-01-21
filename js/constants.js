@@ -47,15 +47,15 @@ var d = {
         "answerlist": [
             {
                 "id": "q1a",
-                "img": "q1a.png"
+                "img": "q1a.jpg"
             },
             {
                 "id": "q1b",
-                "img": "q1b.png"
+                "img": "q1b.jpg"
             },
             {
                 "id": "q1c",
-                "img": "q1c.png"
+                "img": "q1c.jpg"
             }
         ]
     },
