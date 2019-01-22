@@ -64,15 +64,15 @@ var d = {
         "answerlist": [
             {
                 "id": "q2a",
-                "img": "q2a.png"
+                "img": "q2a.jpg"
             },
             {
                 "id": "q2b",
-                "img": "q2b.png"
+                "img": "q2b.jpg"
             },
             {
                 "id": "q2c",
-                "img": "q2c.png"
+                "img": "q2c.jpg"
             }
         ]
     },
@@ -81,11 +81,11 @@ var d = {
         "answerlist": [
             {
                 "id": "q3a",
-                "img": "q3a.png"
+                "img": "q3a.jpg"
             },
             {
                 "id": "q3b",
-                "img": "q3b.png"
+                "img": "q3b.jpg"
             },
             {
                 "id": "q3c",
