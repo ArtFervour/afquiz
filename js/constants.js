@@ -3,7 +3,7 @@ var d = {
         "title": "Art Fervour Quiz"
     },
     "cities": {
-        "heading": "Which city are you in?",
+        "heading": "Where art thou?",
         "citylist": [
             {
                 "name": "bangalore",
@@ -43,7 +43,7 @@ var d = {
         ]
     },
     "q1": {
-        "heading": "Q1: Pick something",
+        "heading": "Q1: My favourite artwork is: ",
         "answerlist": [
             {
                 "id": "q1a",
@@ -60,7 +60,7 @@ var d = {
         ]
     },
     "q2": {
-        "heading": "Q2: Pick something",
+        "heading": "Q2: Take me to see: ",
         "answerlist": [
             {
                 "id": "q2a",
@@ -77,7 +77,7 @@ var d = {
         ]
     },
     "q3": {
-        "heading": "Q3: Pick something",
+        "heading": "Q3: Pick your final favourite:",
         "answerlist": [
             {
                 "id": "q3a",
@@ -94,23 +94,28 @@ var d = {
         ]
     },
     "emailform": {
-        "heading": "You're just a step away from your personalized art guide!"
+        "heading": " You're just one step away from your personalised art guide for this week!
+",
     },
     "outcomes": [
         {
-            "heading": "You're a Traditionalist!",
+            "heading": "You're a Traditionalist! You’re an old soul grappling with modernity. You’re fascinated by history and skeptical of your phone. We know you’d prefer this quiz to be on paper because you love the smell of old books. Actually, you love all things vintage, especially your parents taste in music since you now borrow all their records. Make sure to carry your 35mm camera to check out your recommendations for the latest exhibitions and discoveries in your city!
+
+",
             "paragraph": "You like things traditional. Here's a guide for you:",
             "img": "traditional.jpg",
             "rr": [["q1a"], ["q2b", "q2c"], ["q3a", "q3b", "q3c"]]
         },
         {
-            "heading": "You're New Age!",
+            "heading": "You're New Age! You’re a cutting edge millennial. You’re interested in contemporary art and discovering new age art forms. We hope your hydroponic microgreens are doing well. You’re always on the prowl for something new especially when you want to escape your coworking startup space and explore the world beyond. Pack your avocado toasts and GoPro and head to these exhibits after brunch on Saturday. Check out your recommendations for the latest exhibitions and newest artists!
+",
             "paragraph": "You like new-age shit. Here's a guide for you:",
             "img": "contemporary.jpg",
             "rr": [["q1b", "q1c"], ["q2a"], ["q3a", "q3b", "q3c"]]
         },
         {
-            "heading": "You're a Mixed Bag!",
+            "heading": "You're a Mixed Bag! You’re an old soul with a millennial heart. You’re fascinated by the convergence of the Digital Age with the Modern, and could never pick between The Beatles and Post Malone. You oscillate between classic suits and Supreme sweats, and shop at both vintage and concept stores. We know you still play road rash but hide it from your fortnite friends. Check out your recommendations for the latest exhibitions in your city!
+",
             "paragraph": "You like it all! Here's a guide for you:",
             "img": "mixed.jpg",
             "rr": [["q1b", "q1c"], ["q2b", "q2c"], ["q3a", "q3b", "q3c"]]
