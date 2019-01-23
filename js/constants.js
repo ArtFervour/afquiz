@@ -98,20 +98,20 @@ var d = {
     },
     "outcomes": [
         {
-            "heading": "You're a Traditionalist! You’re an old soul grappling with modernity. You’re fascinated by history and skeptical of your phone. We know you’d prefer this quiz to be on paper because you love the smell of old books. Actually, you love all things vintage, especially your parents taste in music since you now borrow all their records. Make sure to carry your 35mm camera to check out your recommendations for the latest exhibitions and discoveries in your city!",
-            "paragraph": "You like things traditional. Here's a guide for you:",
+            "heading": "You're a Traditionalist!",
+            "paragraph": "You’re an old soul grappling with modernity. You’re fascinated by history and skeptical of your phone. We know you’d prefer this quiz to be on paper because you love the smell of old books. Actually, you love all things vintage, especially your parents taste in music since you now borrow all their records. Make sure to carry your 35mm camera to check out your recommendations for the latest exhibitions and discoveries in your city!",
             "img": "traditional.jpg",
             "rr": [["q1a"], ["q2b", "q2c"], ["q3a", "q3b", "q3c"]]
         },
         {
-            "heading": "You're New Age! You’re a cutting edge millennial. You’re interested in contemporary art and discovering new age art forms. We hope your hydroponic microgreens are doing well. You’re always on the prowl for something new especially when you want to escape your coworking startup space and explore the world beyond. Pack your avocado toasts and GoPro and head to these exhibits after brunch on Saturday. Check out your recommendations for the latest exhibitions and newest artists!",
-            "paragraph": "You like new-age shit. Here's a guide for you:",
+            "heading": "You're New Age!",
+            "paragraph": "You’re a cutting edge millennial. You’re interested in contemporary art and discovering new age art forms. We hope your hydroponic microgreens are doing well. You’re always on the prowl for something new especially when you want to escape your coworking startup space and explore the world beyond. Pack your avocado toasts and GoPro and head to these exhibits after brunch on Saturday. Check out your recommendations for the latest exhibitions and newest artists!",
             "img": "contemporary.jpg",
             "rr": [["q1b", "q1c"], ["q2a"], ["q3a", "q3b", "q3c"]]
         },
         {
-            "heading": "You're a Mixed Bag! You’re an old soul with a millennial heart. You’re fascinated by the convergence of the Digital Age with the Modern, and could never pick between The Beatles and Post Malone. You oscillate between classic suits and Supreme sweats, and shop at both vintage and concept stores. We know you still play road rash but hide it from your fortnite friends. Check out your recommendations for the latest exhibitions in your city!",
-            "paragraph": "You like it all! Here's a guide for you:",
+            "heading": "You're a Mixed Bag!",
+            "paragraph": "You’re an old soul with a millennial heart. You’re fascinated by the convergence of the Digital Age with the Modern, and could never pick between The Beatles and Post Malone. You oscillate between classic suits and Supreme sweats, and shop at both vintage and concept stores. We know you still play road rash but hide it from your fortnite friends. Check out your recommendations for the latest exhibitions in your city!",
             "img": "mixed.jpg",
             "rr": [["q1b", "q1c"], ["q2b", "q2c"], ["q3a", "q3b", "q3c"]]
         }
