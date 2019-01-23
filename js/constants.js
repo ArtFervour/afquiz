@@ -6,6 +6,16 @@ var d = {
         "heading": "Which city are you in?",
         "citylist": [
             {
+                "name": "bangalore",
+                "displayname": "Bangalore",
+                "img": "logo.png"
+            },
+            {
+                "name": "delhi",
+                "displayname": "Delhi",
+                "img": "logo.png"
+            },
+            { 
                 "name": "goa",
                 "displayname": "Goa",
                 "img": "logo.png"
