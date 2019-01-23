@@ -3,7 +3,7 @@ var d = {
         "title": "Art Fervour Quiz"
     },
     "cities": {
-        "heading": "Where do you want to see art?",
+        "heading": "Which city are you in?",
         "citylist": [
             {
                 "name": "bangalore",
