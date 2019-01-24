@@ -36,3 +36,7 @@
 .maintext {
     padding-bottom: 1.6rem;
 }
+
+.hiddeninput {
+    display: none;
+}
