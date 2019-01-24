@@ -66,17 +66,17 @@
             <div class="col-sm" align="center">
                 <div class="card" id="emailcard">
                     <div class="card-body">
-                        <form name="quiz" id="emailform" method="POST" data-netlify="true">
+                        <form name="quizinfo" id="emailform" method="POST" data-netlify="true">
                             <div class="form-group">
                                 <label for="inputemail">Email address</label>
                                 <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp" placeholder="Enter email" name="email">
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
-                            <input type="text" class="hiddeninput" id="cityinput">
-                            <input type="text" class="hiddeninput" id="q1input">
-                            <input type="text" class="hiddeninput" id="q2input">
-                            <input type="text" class="hiddeninput" id="q3input">
-                            <input type="text" class="hiddeninput" id="outcomeinput">
+                            <input type="text" name="c" class="hiddeninput" id="cinput">
+                            <input type="text" name="q1" class="hiddeninput" id="q1input">
+                            <input type="text" name="q2" class="hiddeninput" id="q2input">
+                            <input type="text" name="q3" class="hiddeninput" id="q3input">
+                            <input type="text" name="o" class="hiddeninput" id="outcomeinput">
                             <button type="submit" class="btn btn-light" id="submitemail" disabled>Submit</button>
                         </form>
                     </div>
