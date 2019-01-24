@@ -108,6 +108,7 @@ $( document ).ready(function() {
             $('#guideimg').prop('src', './img/' + city + '/' + o3.img);
             outcome = o3.id;
         }
+        $('#cityinput').val(city);
         $('#q1input').val(q[0]);
         $('#q2input').val(q[1]);
         $('#q3input').val(q[2]);
