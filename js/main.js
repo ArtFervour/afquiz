@@ -91,28 +91,39 @@ $( document ).ready(function() {
         var o1 = d.outcomes[0];
         var o2 = d.outcomes[1];
         var o3 = d.outcomes[2];
-        console.log(q);
-        console.log(o1.rr);
-        console.log(o1.rr);
+        var outcome;
         if (o1.rr[0].indexOf(q[0]) != -1 && o1.rr[1].indexOf(q[1]) != -1 && o1.rr[2].indexOf(q[2]) != -1) {
             $('#endingh').text(o1.heading);
             $('#endingp').text(o1.paragraph);
             $('#guideimg').prop('src', './img/' + city + '/' + o1.img);
+            outcome = o1.id;
         } else if (o2.rr[0].indexOf(q[0]) != -1 && o2.rr[1].indexOf(q[1]) != -1 && o2.rr[2].indexOf(q[2]) != -1) {
             $('#endingh').text(o2.heading);
             $('#endingp').text(o2.paragraph);
             $('#guideimg').prop('src', './img/' + city + '/' + o2.img);
+            outcome = o2.id;
         } else {
             $('#endingh').text(o3.heading);
             $('#endingp').text(o3.paragraph);
             $('#guideimg').prop('src', './img/' + city + '/' + o3.img);
+            outcome = o3.id;
         }
+        $('#cinput').val(city);
+        $('#q1input').val(q[0]);
+        $('#q2input').val(q[1]);
+        $('#q3input').val(q[2]);
+        $('#outcomeinput').val(outcome);
     });
     $('#submitemail').prop('disabled', true);
     $('#inputemail').keyup(function() {
         var email = String($(this).val());
         if (re.test(email.toLowerCase())) {
             $('#submitemail').prop('disabled', false);
+            $('#cinput').prop('disabled', false);
+            $('#q1input').prop('disabled', false);
+            $('#q2input').prop('disabled', false);
+            $('#q3input').prop('disabled', false);
+            $('#outcomeinput').prop('disabled', false);
         }
     });
     $('#emailform').submit(function(e) {
