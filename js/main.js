@@ -119,6 +119,11 @@ $( document ).ready(function() {
         var email = String($(this).val());
         if (re.test(email.toLowerCase())) {
             $('#submitemail').prop('disabled', false);
+            $('#cinput').prop('disabled', false);
+            $('#q1input').prop('disabled', false);
+            $('#q2input').prop('disabled', false);
+            $('#q3input').prop('disabled', false);
+            $('#outcomeinput').prop('disabled', false);
         }
     });
     $('#emailform').submit(function(e) {
