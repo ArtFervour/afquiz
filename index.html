@@ -1,353 +1,104 @@
 <!doctype html>
-<html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
-  <meta charset="utf-7">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0">
-  <title>Guess the Artist</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131255348-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-131255348-2');
+    </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../src/jquery.quiz.css" />
-  <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
-  <link rel="stylesheet" href="/src/jquery.tinymodal.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
-    crossorigin="anonymous"></script>
-  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
-  <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="/src/jquery.tinymodal.js"></script> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="icon" href="./img/aff.png">
+    <link rel="stylesheet" href="./css/main.css">
 
-  <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
-  <!--===============================================================================================-->
-  <!-- <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   <!-- <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"> -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
-   <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-   <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-   <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-   <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-   <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-   <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="css/util.css">
-   <link rel="stylesheet" type="text/css" href="css/main.css">
-   <link rel="stylesheet" href="css/social.css">
-
-   <script src="/src/jquery.countdownTimer.min.js"></script>
-  
-  <style>
-    body {
-      min-height: 75vh;
-      background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-      background-size: 120% 120%;
-      font-family: 'Roboto Condensed';
-    }
-
-    .pos{
-      margin-top: -120px;
-      margin-bottom: 10px;
-    }
-
-    .container {
-      margin: 150px auto 30px auto;
-      max-width: 640px;
-    }
-
-    h3 {
-      text-align: center;
-    }
-
-    .timer {
-      float: right;
-      font-size: 14px;
-    }
-
-    .jst-hours {
-      float: left;
-      display: none;
-    }
-
-    .jst-minutes {
-      float: left;
-    }
-
-    .jst-seconds {
-      float: left;
-    }
-
-    .jst-clearDiv {
-      clear: both;
-    }
-
-    .jst-timeout {
-      color: red;
-    }
-  </style>
-
-  <link rel="stylesheet" href="/src/bootstrap.min.css">
-  <link rel="stylesheet" href="/src/jquery.quiz.css">
-
-  <!-- <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"> -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
-
-</head>
-
-<body>
-  <script src="/src/jquery.quiz.js"></script>
-
-  <div class="jquery-script-clear"></div>
-
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark"  style="position: fixed; width: 100%;">
-      <div class="navbar-brand">
-          <img src="images/logo.jpg" height="28" alt="Art Fervour Games">
-          <h6 style="font-family:'Raleway';display: inline; margin-left: 6px;">ArtFervour Games</h6>
-      </div>
-  </nav>
-
-  <div class="container-contact100">
-      <div class="card card-custom bg-white border-white">
-
-      <div class="card-custom-img"
-          style="background-image: url(https://www.henrimatisse.org/images/gallery/the-dessert-harmony-in-red.jpg);">
-      </div>
-
-      <div class="card-custom-avatar">
-          <img class="img-fluid" src="/images/LOGO.jpg" alt="Avatar" />
-      </div>
-
-      <div class="card-body" style="overflow-y: auto">
-          <h4 class="card-title">GUESS THE ARTIST</h4>
-          <p class="card-text">5 questions, 90 seconds.<br/> Can you guess the artists behind these iconic artworks?</p>
-      </div>
-
-  <div class="container">
-    <h3 id="title" style="margin-top: -106px !important; margin-bottom: -20px;">GUESS THE ARTIST</h3>
-    <div id="quiz">
-      <div id="quiz-start-screen">
-        <p class="pos"><a href="#" id="quiz-start-btn" class="quiz-button" style="z-index: inherit !important;">Let's play!</a></p>
-
-        <div id="tc">
-          <!-- <p align=center class="pos1" style="margin-bottom: 0px; margin-top: 32px;">Read</hp> -->
-          
+    <title id="sitetitle"></title>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div class="container" id="headercontainer">
+        <div class="row">
+            <div class="col-lg" align="left">
+                <img src="./img/af.png" alt="Art Fervour Logo" id="aflogo">
+            </div>
+            <div class="col-lg" align="right" id="headernav"></div>
         </div>
-      </div>
-      <p class='timer' style="margin-top: 16px; color:#333; display:none" data-seconds-left=90></p>
-      <p id="s_timer" class='timer' style="font-family:'Roboto'; font-size: 11px; margin-top: 32px; color:rgb(0, 0, 0);"></p>
     </div>
 
-    <form id="user" name="Contact Form" method="POST" data-netlify="true">
-      <div id="myForm">
-        <h3 style="margin-top: 80px">Please enter your details to get your score!</h3>
-        <p>
-          <input type="text" name="name" placeholder="Enter your name" style="margin-top: 24px" />
-        </p>
-        <p>
-            <input type="tel" name="mobile" placeholder="Enter your mobile number" />
-          </p>
-        <p>
-          <input type="email" name="email" placeholder="Enter your email" required
-            pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" />
-          <input type="hidden" id="score" name="score" value="0">
-        </p>
-        <p>
-          <button type="submit" id="submit"
-            style="margin: 32px auto; padding: 0.5em 1em; display: block; background: #333; color: #fff; border-radius: 10px; border: none;">Submit</button>
-        </p>
-      </div>
-    </form>
-  </div>
+    <div class="container maincontainer" id="citycontainer">
+        <h4 class="maintext" id="cityh"></h4>
+        <div class="row" id="cityrow"></div>
+    </div>
 
-  <div id="fter">
-    <p align=center style="text-align: center; font-size:12px;">Thank you for playing ‘Guess the Artist’.<br />We hope you
-      enjoyed it.</p>
-      <!-- Facebook -->
-      <div align=center style="margin-top: 24px;">
-        <p>
-          <p align=center style="text-align: center; font-size:12px;">Share game on</p>
-          <a href="https://www.facebook.com/sharer.php?u=https://game.artfervour.ga/" target="_blank">
-            <img align=center style="height: 32px; width: 32px; margin-right: 10px;"
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEUVfcP///8AdMAAd8Hz+fzv9fr6/f4fgMXQ4fAAc78AecHm7/eLtdt1qdZ+r9gAcb7Z5/NBj8uav+Bbm9AphcfH2+260ummxuOfwuE6jMrd6vVRls5moNJtpNNWmc8pg8W+1uuwzOYAabuQud2SFzxcAAAEJklEQVR4nO3da3uiMBCGYQRFHA8RPFXRba3//z9uddfDamsG4hAm+z7fpbkvlGiBEHVCL/I9APH+P2FXfekT4XS0piTWXkL5YfOtcJobisKITLl5FBbB+I6RWd0LxwPfg3pxZvSvsAgN+EVc3Qqnxvd4BDLDG2HuezQS0ewqzELcheedeBJOQjqMXkuKi3DueywyUXkWponvsUh1FvZi3yMRKglfmEKoPQj1B6H+INQfhPqDUH8Q6g9C/UGoPxVCulTjxa0WUhIP4miez7a73W67nf0q83z+3o8oNoPTSUIOubXCL8X77m2xuT+beyzt9jbZYrk6jGdr64baKaRBNF52v7E9NrbtxjYKk3icsXRKhXF/9d07Mxhh0t9X4OkTUlxU82kTxmWvKlCX0LxV9qkSEk1rABUJaV79HapKSOsqU4RCIc1rAtUII95XNL3CeFgXqERoPmoDdQiTSX2gDmHfAahCaBaBC/9eWxew0NQ/juoQ0tgJqEDouAvbL3T8FCoQDpwOpBqETnOhBiGNbALtwkGt3/WahO53zbVc6DoZtl+Y7EMXVpnuh4t9MZo8ZD355HkfMnXpcksmThJ6zP43vApLHvCN4vq3u3gVEuvHfXftNDSvwoTzb/xu5Ha7kldhzPlSmjvej+VXyPhGs3cdl1fhgHGqou/6R/x+Du3/6c6c79z1eyy1n6wYOd8V6Xc+tL9J3W/dbbvQ/cZWr0L7D/yu+83JLRcO3ZcIaLlw6j6qlgszCO1BKBqEELKCUDQIIWQFoWgQQsgKQtEghJAVhKJBqENIgx8z9pPc2efPLz/lX0iT3vDnrML0yYuP9d79C50v63qe/ysVhIU9+9tUuZBxJFIuXAYvLOxrkioXWq9qUy8sgxfap0PtQsYpYt3CYfBCzhdz3cI9YwFr3cJDC1bgkRUypkPlQs4VU7qFnBGoFnY5Y1YtZF0xpVq4CH4fcqZD3ULOdKhbuA1eaF9wT7uQNQLNQt4FxJqFG9YFxJqFH6whaxauWI830izkPYNLs5A1HaoW8p4yplnIG7H8OeAnz0MlKyL7fPJy3gBwHl80CCFkBaFoEELICkLRIISQFYSiQQghKwhFgxBCVhCKBiGErCAUDUIIWUEoGoQQsoJQNAghZAWhaBBCyApC0SCEkBWEokEIISsIRYMQQlYQigYhhKwgFA1CCFlBKBqEELKCUDQIIWQFoWgQQsjqtPD7UZiyFgp5bY0Io7OQucrES2tCSOVFyFsL5aU1IUyKizBzf2xr1ZoQmuFF+IKHC1etASHNOldh8zuxAeGfXfhX2Dm4P3y3WvJCs+rcCjvjhoniQnNe/+cs7BSm0QOqsJDOe/BG2JmWTRpFhWRm16e8RDfbnI7WlDQTYxWlxWfNbVN+2NxsJ7rbbld96Z3oXhheEOrvN+bGaNyBvxVbAAAAAElFTkSuQmCC"
-              alt="Facebook" />
-          </a>
-          <a href="whatsapp://send?text=https://game.artfervour.ga/">
-            <img align=center style="height: 32px; width: 32px; margin-right: 6px;"
-              src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-01-512.png"
-              alt="WhatsApp" />
-          </a>
-          <a class="btn1" data-clipboard-text="https://game.artfervour.ga/">
-            <img align=center style="height: 32px; width: 32px;"
-              src="https://cdn2.iconfinder.com/data/icons/copy-paste/32/Copy_Link_Web_Page_Href_interface_1-512.png"
-              alt="Copy Link" />
-          </a>
-        </p>
-      </div>
-    <p align=center style="text-align: center; font-size:12px; margin-top: 30px; padding-right:42px; padding-left:42px;">
-      Correct answers &amp; lucky weekly winners to be announced every Monday. stay tuned to our
-      Instagram stories to find out if you&#39;ve won!</p>
-    <p align=center
-      style="text-align: center; font-size:12px; margin-bottom: 0px; padding-right:42px; padding-left:42px;">Head to Art
-      fervour to find your art persona and get personalized art guides for your city!</p>
-    <a href="https://www.artfervour.com/">
-      <p align=center
-        style="width: 110px; margin-bottom: 50px;  margin-top: 16px; margin-left:auto; margin-right:auto; padding: 0.5em 1em; display: block; background: #333; color: #fff; border-radius: 10px; border: none;">
-        <a href="https://www.artfervour.com/" class="quiz-button" target="_blank" style="color: #fff;">Art Fervour</a></p>
-    </a>
-  </div>
+    <div class="container maincontainer" id="q1container">
+        <h4 class="maintext" id="q1h"></h4>
+        <div class="row" id="q1row"></div>
+    </div>
 
-      </div>
-</div>
+    <div class="container maincontainer" id="q2container">
+        <h4 class="maintext" id="q2h"></h4>
+        <div class="row" id="q2row"></div>
+    </div>
 
-  <footer id="sticky-footer" class="py-4 bg-dark text-white-50 cnt">
-      <div class="container1 text-center">
-          <small style="color: rgb(119, 119, 119)">Follow us on:</small>
-          <br>
-          <a href="https://www.facebook.com/artfervourindia/" target="_blank" class="fa fa-facebook"></a>
-          <a href="https://www.instagram.com/art.fervour/?hl=en" target="_blank" class="fa fa-instagram"></a>
-          <!-- <a href="#" class="fa fa-twitter"></a> -->
-          <br>
-          <small style="color: rgb(119, 119, 119)">Copyright &copy; artfervour.com</small><br>
-          <small><a href="/privacy.html" id="privacy" target="_parent" style="font-family:'Roboto', sans-serif; font-size: 12px;">Privacy Policy</a></small>
-          <br/>
-          <small><a href="/terms.html" target="_parent" id="terms" style="font-family:'Roboto', sans-serif; font-size: 12px;">Terms & Conditions</a></small>
-      </div>
-  </footer>
+    <div class="container maincontainer" id="q3container">
+        <h4 class="maintext" id="q3h"></h4>
+        <div class="row" id="q3row"></div>
+    </div>
 
-  <script>
-    $('.btn1').click(function(){
-      var clip = new Clipboard('.btn1');
-      alert("Game link has been copied!");
-    });
-  </script>
+    <div class="container maincontainer" id="emailcontainer" align="center">
+        <h4 class="maintext" id="emailh"></h4>
+        <div class="row">
+            <div class="col-sm" align="center">
+                <div class="card" id="emailcard">
+                    <div class="card-body">
+                        <form name="quizinfo" id="emailform" method="POST" data-netlify="true">
+                            <div class="form-group">
+                                <label for="inputemail">Email address</label>
+                                <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <input type="text" name="city" class="hiddeninput" id="cinput" disabled>
+                            <input type="text" name="q1" class="hiddeninput" id="q1input" disabled>
+                            <input type="text" name="q2" class="hiddeninput" id="q2input" disabled>
+                            <input type="text" name="q3" class="hiddeninput" id="q3input" disabled>
+                            <input type="text" name="outcome" class="hiddeninput" id="outcomeinput" disabled>
+                            <button type="submit" class="btn btn-light" id="submitemail" disabled>Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
 
-  <script>
-    $('#title').hide();
-    $('#quiz-start-btn').click(function () {+
-      $('.card-custom-img').hide();
-      $('.card-custom-avatar').hide();
-      $('.card-body').hide();
-      $('#title').show();
+    <div class="container maincontainer" id="endingcontainer" align="center">
+        <div class="fb-share-button" data-href="https://artfervour.com" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fartfervour.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+        <br><br>
+        <h4 id="endingh"></h4>
+        <br>
+        <p class="maintext" align="left" id="endingp"></p>
+        <img src="" alt="Your personalized art guide" class="guideimg" id="guideimg">
+        <br><br>
+        <button type="button" id="restart" class="btn btn-light">Restart Quiz</button>
+        <a href="https://artfervour.com" class="btn btn-light" role="button">Back to Art Fervour</a>
+    </div>
 
-      $('#s_timer').countdowntimer({
-        seconds: 90,
-        size: "lg",
-      });
-
-      $('.timer').startTimer({
-        onComplete: function () {
-          $('#quiz').html('<h4 align=center style="margin-top:48px; margin-bottom:16px">Sorry you’ve run out of time\!</h4>');
-          $('#quiz').append('<div id="quiz-start-screen"><p><a href="#" id="button" onclick="reloadPage();" class="quiz-button">Play Again</a></p></div>');
-          $(document).ready(function () {
-            $("#button").click(function () {
-              location.reload(true);
-            });
-          });
-        }
-      });
-    });
-  </script>
-
-  <script>
-    $('#quiz').quiz({
-      //resultsScreen: '#results-screen',
-      //counter: false,
-      //homeButton: '#custom-home',
-      counterFormat: 'Question %current of %total',
-      questions: [
-        {
-          'q': 'Question 1',
-          'qImg': '../img/${q1.png}',
-          'qHint': 'The artist is best known for his representations of village life, especially "Santhal" women.',
-          'options': [
-            'Rabindranath Tagore',
-            'Hemendranath Mazumdar',
-            'Jamini Roy',
-            'Abhanindranath Tagore'
-          ],
-          'correctIndex': 2,
-        },
-        {
-          'q': 'Question 2',
-          'qImg': '../img/q2.png',
-          'qHint': 'Although there are a number of versions of this painting, the original lies in the Louvre, Paris.',
-          'options': [
-            'Michelangelo',
-            'Sandro Botticelli',
-            'Leonardo da Vinci',
-            'Pablo Picasso'
-          ],
-          'correctIndex': 2,
-        },
-        {
-          'q': 'Question 3',
-          'qImg': '../img/q3.png',
-          'qHint': 'The artist was called the \'Picasso of India\' by Forbes magazine ',
-          'options': [
-            "Maqbool Fida Husein",
-            "Francis Newton Souza",
-            "Syed Haider Raza",
-            "Akbar Padamsee"
-          ],
-          'correctIndex': 0,
-        },
-        {
-          'q': 'Question 4',
-          'qImg': '../img/q4.jpg',
-          'qHint': 'The artist had a tumultuous relationship with Mexican muralist, Diego Rivera.',
-          'options': [
-            "Louis Bourgeois",
-            "Frida Kahlo",
-            "Salvador Dali",
-            "Georgia O'Keeffe"
-          ],
-          'correctIndex': 1,
-        },
-        {
-          'q': 'Question 5',
-          'qImg': '../img/q5.jpg',
-          'qHint': 'The artist\'s childhood was filled with tragedy which he later reflected in his artworks.',
-          'options': [
-            "Edvard Munch",
-            "Vincent van Gogh",
-            "Gustav Klimt",
-            "Henri Matisse"
-          ],
-          'correctIndex': 0,
-        }
-      ]
-    });
-  </script>
-  <!-- jQuery timer plugin -->
-  <script src="/src/jquery.simple.timer.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/timer.jquery/0.9.0/timer.jquery.js"></script> -->
-</body>
-
-<!-- <script type="text/javascript">
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script> -->
-
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="./js/constants.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
